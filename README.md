@@ -24,7 +24,7 @@ sequenceDiagram
     deactivate server
 
     activate client
-    note over client: The client responds with a ClientKeyExchange<br/>message,which may contain a reMasterSecret,<br/> public key, or nothing. (Again, this depends<br/> on the selected cipher.)<br/>This PreMasterSecret is encrypted<br/>using the public key of the server certificate.
+    note over client: The client responds with a ClientKeyExchange<br/>message,which may contain a PreMasterSecret,<br/>public key, or nothing. (Again, this depends<br/> on the selected cipher.)<br/>This PreMasterSecret is encrypted<br/>using the public key of the server certificate.
     client ->> server: ClientKeyExchange
     client ->> server: ChangeCipherSpec
     client ->> server: Finished
